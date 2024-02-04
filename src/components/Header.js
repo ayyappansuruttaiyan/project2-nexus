@@ -5,7 +5,7 @@ import { fadeIn } from "../variants";
 import { Link } from "react-scroll";
 const Header = () => {
   return (
-    <header className=" bg-pink-300 py-8">
+    <header className=" py-8">
       <div className="container mx-auto my-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
@@ -13,7 +13,7 @@ const Header = () => {
             variants={fadeIn("right", 0.5)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: false, amount: 0.5 }}
             className="flex items-center justify-center"
           >
             <img className="w-[60px]" src={Logo} alt="logo" />
@@ -26,15 +26,22 @@ const Header = () => {
             </a>
           </motion.div>
           {/* Logo end*/}
-          <Link
-            to="contact"
-            activeClass="active"
-            smooth={true}
-            spy={true}
-            offset={-200}
+          <motion.div
+            variants={fadeIn("left", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.5 }}
           >
-            <button className="btn btn-sm">Enquiry</button>
-          </Link>
+            <Link
+              to="contact"
+              activeClass="active"
+              smooth={true}
+              spy={true}
+              offset={-200}
+            >
+              <button className="btn btn-sm">Enquiry</button>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </header>

@@ -17,7 +17,7 @@ const Banner = () => {
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.3 }}
               className="text-[55px] font-bold leading-[0.9] lg:text-[45px]"
             >
               <span>Pioneering Tech Solutions</span> <br />{" "}
@@ -27,7 +27,7 @@ const Banner = () => {
               variants={fadeIn("down", 0.3)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.3 }}
               className="my-6 text-[36px] lg:text-[50px] font-secondary font-semibold uppercase leading-[1]"
             >
               <TypeAnimation
@@ -50,10 +50,10 @@ const Banner = () => {
               />
             </motion.div>
             <motion.p
-              variants={fadeIn("up", 0.5)}
+              variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.7 }}
               className="mb-8 max-w-lg mx-auto lg:mx-0"
             >
               Ensure that you have the extension's commands available. You can
@@ -75,10 +75,10 @@ const Banner = () => {
 
             {/* social icons */}
             <motion.div
-              variants={fadeIn("up", 0.7)}
+              variants={fadeIn("up", 0.3)}
               initial="hidden"
               whileInView={"show"}
-              viewport={{ once: true, amount: 0.7 }}
+              viewport={{ once: false, amount: 0.3 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
               <a href="/">
@@ -99,7 +99,7 @@ const Banner = () => {
             variants={fadeIn("left", 0.3)}
             initial="hidden"
             whileInView={"show"}
-            viewport={{ once: true, amount: 0.7 }}
+            viewport={{ once: false, amount: 0.7 }}
             className="hidden lg:flex flex-1 max-w-[420px] lg:max-w-[580px] mx-auto mix-blend-lighten"
           >
             <img src={Image} alt="avatar" />
